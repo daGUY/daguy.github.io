@@ -3,4 +3,9 @@ body.modal-open {
   left: 0;
   position: fixed;
   right: 0;
-  top: 0; }
+  top: 0;
+}
+
+.modal-open .modal {
+  -webkit-overflow-scrolling: touch;
+}
