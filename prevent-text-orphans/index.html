@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Prevent Text Orphans</title>
+	<link rel="stylesheet" href="css/base.css" />
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/jquery.preventTextOrphans.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".enable-pto").preventTextOrphans();
+			$(".enable-pto.minimum").preventTextOrphans({ minimum: 3 });
+		});
+	</script>
+</head>
+<body>	
+	<div id="header">
+		<div class="content">
+			<h1>Prevent Text Orphans Demo</h1>
+		</div>
+	</div>
+	<div class="content">
+		<p>Default text:</p>
+		<h2>Let Us Know What You Think</h2>
+		<hr />
+		<p>With <code>preventTextOrphans()</code> enabled, default options:</p>
+		<h2 class="enable-pto">Let Us Know What You Think</h2>
+		<hr />
+		<p>With <code>preventTextOrphans()</code> enabled, passing <code>{ minimum: 3 }</code>:</p>
+		<h2 class="enable-pto minimum">Let Us Know What You Think</h2>
+	</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+@keyframes radioactive {
+	from {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	}
+	50% {
+		box-shadow: 0 0 18px #f8942e;
+	}
+	to {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	}
+}
+
+body {
+	background: #efefef;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+sup {
+	line-height: 0;
+}
+sup small {
+	font-size: 0.5em;
+}
+hr {
+	background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+	border: none;
+	height: 1px;
+	margin: 2em 0;
+	position: relative;
+}
+hr::after {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+	bottom: -1px;
+	content: "";
+	height: 1px;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.text-nowrap{
+	white-space: nowrap;
+}
+.content {
+	margin: 0 auto;
+	padding: 1em 0;
+	width: 960px;
+}
+.content h2 {
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 0.25em;
+	padding: 1em;
+	text-align: center;
+	width: 300px;
+}
+.content h2,
+.content h3 {
+	margin: 0;
+}
+.content h3 {
+	font-weight: 100;
+}
+.button {
+	background: #f8942e;
+	background: linear-gradient(#ffb43a, #ffb43a, #f8942e 50%, #f67a00 50%, #ea5a0a);
+	border: 1px solid #cc6500;
+	border-radius: 2em;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: bold;
+	height: 0;
+	line-height: 0;
+	padding: 1em 1.5em;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+	text-transform: uppercase;
+}
+.button::before {
+	background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0.3) 90%, rgba(255, 255, 255, 0));
+	border-radius: 2em;
+	content: "";
+	height: 0.15625em;
+	position: absolute;
+	left: 1.25em;
+	right: 1.25em;
+	top: 0;
+}
+.button:hover {
+	background: #faad5f;
+	background: linear-gradient(#ffc76d, #ffc76d, #faad5f 50%, #ff942a 50%, #f67731);
+}
+.button:active {
+	background: linear-gradient(#ea5a0a, #f67a00);
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2) inset;
+}
+.button:active::before {
+	display: none;
+}
+.button.radioactive {
+	animation: radioactive 2s infinite;
+}
+#header {
+	background: #fff;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+	position: relative;
+	z-index: 1;
+}
