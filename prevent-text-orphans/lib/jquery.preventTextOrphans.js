@@ -15,6 +15,14 @@
                 return;
             }
 
+            // Store settings for reapplication later
+            $element.data("pto-settings", {
+                minimum: settings.minimum,
+                wrapperClass: settings.wrapperClass
+            });
+
+            $element.addClass("pto-initialized");
+
             applyTextOrphanPrevention($element, settings.minimum, settings.wrapperClass);
         });
 
@@ -128,7 +136,7 @@
         }
     };
 
-    // On resize, remove and reapply wrapping globally
+    // On resize, remove and reapply wrapping
     $(window).on("resize orientationchange", function () {
         $('span.text-nowrap').each(function () {
             const $span = $(this);
@@ -136,10 +144,14 @@
             $span.replaceWith(html);
         });
 
-        // Reapply to elements that had the plugin applied
-        // Since we don't track them, we can assume they have a class or data attribute
-        // For simplicity, reapply to all elements that might have been processed
-        // But to avoid issues, perhaps add a data attribute
-    });
+        // Reapply the plugin with each element's stored settings
+        $('.pto-initialized').each(function () {
+            const $el = $(this);
+            const settings = $el.data('pto-settings');
 
+            if (settings) {
+                $el.preventTextOrphans(settings);
+            }
+        });
+    });
 })(jQuery);
