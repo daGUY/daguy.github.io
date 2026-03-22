@@ -1,0 +1,62 @@
+@keyframes move {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 15px 15px;
+	}
+}
+
+body {
+	font: caption;
+	font-size: 16px;
+}
+.progressbar {
+	margin: 0.5em auto;
+}
+.progressbar .percentage {
+	color: #666;
+	font-size: 0.9em;
+	margin: 0 0 0.5em;
+	text-align: center;
+}
+.progressbar .meter {
+	background: #a2a4a6;
+	border-radius: 1em;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+	height: 1.3em;
+	padding: 0.125em;
+}
+.progressbar .meter span {
+	border-radius: 1em;
+	display: inline-block;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.progressbar .meter.striped > span::after {
+	background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+	background-size: 15px 15px;
+	border-radius: 1em;
+	bottom: 0;
+	content: "";
+	overflow: hidden;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+.progressbar .meter.animated > span::after {
+	animation: move 2s linear infinite;
+}
+.progressbar .meter.gradient > span > span {
+	background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}

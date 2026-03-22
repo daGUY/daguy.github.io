@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Animated Progress Bars</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/jquery.progressBar.css" />
+	<script src="lib/bootstrap.min.js"></script>
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/jquery.progressBar.min.js"></script>
+	<script src="lib/velocity.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".default").progressBar();
+			$(".pink").progressBar({ fillColor: "#f5a1e0" });
+			$(".yellow").progressBar({ fillColor: "#e6c863" });
+			$(".green").progressBar({ fillColor: "#86d936" });
+			$(".orange").progressBar({ fillColor: "#ef8338" });
+		});
+	</script>
+</head>
+<body>
+	<nav class="navbar bg-dark shadow-sm">
+		<div class="container">
+			<div class="navbar-brand text-white">Animated Progress Bars Demo</a>
+		</div>
+	</nav>
+	<div class="py-5">
+		<div class="container">
+			<div class="row g-3">
+				<div class="col-12">
+					<div class="progressbar default" data-step="1" data-total="5"></div>
+				</div>
+				<div class="col-12">
+					<div class="progressbar pink" data-step="2" data-total="5"></div>
+				</div>
+				<div class="col-12">
+					<div class="progressbar yellow" data-step="3" data-total="5"></div>
+				</div>
+				<div class="col-12">
+					<div class="progressbar green" data-step="4" data-total="5"></div>
+				</div>
+				<div class="col-12">
+					<div class="progressbar orange" data-step="5" data-total="5"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
