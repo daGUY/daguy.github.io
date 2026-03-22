@@ -4,7 +4,8 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Prevent Text Orphans</title>
-	<link rel="stylesheet" href="css/base.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<script src="lib/bootstrap.min.js"></script>
 	<script src="lib/jquery.min.js"></script>
 	<script src="lib/jquery.preventTextOrphans.js"></script>
 	<script>
@@ -14,21 +15,41 @@
 		});
 	</script>
 </head>
-<body>	
-	<div id="header">
-		<div class="content">
-			<h1>Prevent Text Orphans Demo</h1>
+<body>
+	<nav class="navbar bg-dark shadow-sm">
+		<div class="container">
+			<div class="navbar-brand text-white">Prevent Text Orphans Demo</a>
 		</div>
-	</div>
-	<div class="content">
-		<p>Default text:</p>
-		<h2>Let Us Know What You Think</h2>
-		<hr />
-		<p>With <code>preventTextOrphans()</code> enabled, default options:</p>
-		<h2 class="enable-pto">Let Us Know What You Think</h2>
-		<hr />
-		<p>With <code>preventTextOrphans()</code> enabled, passing <code>{ minimum: 3 }</code>:</p>
-		<h2 class="enable-pto minimum">Let Us Know What You Think</h2>
+	</nav>
+	<div class="py-5">
+		<div class="container">
+			<div class="row g-3">
+				<div class="col">
+					<div class="card h-100">
+						<div class="card-body">
+							<div class="card-title mb-0 text-muted">Default Text</div>
+							<h2 class="mb-0">Let Us Know What You Think</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<div class="card-body">
+							<div class="card-title mb-0 text-muted">With <code>preventTextOrphans()</code> enabled, default options:</div>
+							<h2 class="mb-0 enable-pto">Let Us Know What You Think</h2>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card h-100">
+						<div class="card-body">
+							<div class="card-title mb-0 text-muted">With <code>preventTextOrphans()</code> enabled, passing <code>{ minimum: 3 }</code>:</div>
+							<h2 class="mb-0 enable-pto minimum">Let Us Know What You Think</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
