@@ -1,0 +1,15 @@
+body {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+p {
+	color: #555;
+	margin: 1em;
+	line-height: 1.25em;
+}
+.bg {
+	background: #f5f5f5 url("../img/bg.jpg") no-repeat;
+	background-size: cover;
+	height: 600px;
+}
