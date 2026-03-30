@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>FlexString</title>
+	<link rel="stylesheet" href="css/flexstring.css" />
+	<link rel="stylesheet" href="css/demo.css" />
+</head>
+<body>
+	<div id="container">
+		<section class="one">1</section>
+		<section class="two">2</section>
+		<section class="three">3</section>
+		<section class="four">4</section>
+		<section class="five">5</section>
+	</div>
+	
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/jquery.flexstring.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#container").flexString();
+		});
+	</script>
+</body>
+</html>
