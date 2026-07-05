@@ -1,0 +1,65 @@
+body {
+	font: 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+#container {
+	background: linear-gradient(#fff, #eee);
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+form {
+	left: 25%;
+	margin: -249px auto 0;
+	position: absolute;
+	top: 50%;
+	width: 50%;
+}
+button {
+	background: linear-gradient(#fff, #ddd);
+	border: 1px solid #ccc;
+	border-radius: 2em;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	color: #666;
+	cursor: pointer;
+	font-size: 1.5em;
+	font-weight: 300;
+	margin: 0 0 2em;
+	outline: none;
+	padding: 1em;
+	width: 100%;
+}
+button:hover {
+	background: linear-gradient(#fff, #eee);
+}
+button:active {
+	background: linear-gradient(#ddd, #fff);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;
+}
+button i.fa {
+	display: none;
+	margin-top: 2px;
+	position: absolute;
+	right: 1em;
+}
+input, select {
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) inset;
+	display: block;
+	font-size: 1.5em;
+	font-weight: 300;
+	padding: 1em;
+	margin: 0.5em 0;
+	width: calc(100% - 2em);
+	-webkit-appearance: none;
+}
+select {
+	cursor: text;
+	width: calc(100% + 2px);
+}
+select.blank {
+	color: #a9a9a9;
+}

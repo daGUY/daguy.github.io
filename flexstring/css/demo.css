@@ -1,0 +1,17 @@
+body {
+	font: 300 1.13rem "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+section {
+	background: #666;
+	color: #fff;
+	margin: 1px 2px;
+	padding: 1rem;
+	text-align: center;
+}
+.one   { background: #00847f; }
+.two   { background: #51c3c1; }
+.three { background: #bce9e6; }
+.four  { background: #ff8100; }
+.five  { background: #d143a9; }

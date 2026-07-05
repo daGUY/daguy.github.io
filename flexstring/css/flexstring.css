@@ -1,0 +1,14 @@
+#container {
+	-js-display: flex;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-ms-flex-flow: column wrap;
+	-webkit-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+section {
+	-webkit-flex: 1 0 auto;
+	flex: 1 0 auto;
+	justify-content: center;
+}
